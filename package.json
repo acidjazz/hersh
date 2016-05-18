@@ -1,0 +1,35 @@
+{
+  "name": "hersh",
+  "version": "0.0.1",
+  "description": "hersh and hersh",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/acidjazz/hersh.git"
+  },
+  "keywords": [
+    "hersh",
+    "html",
+    "javascript"
+  ],
+  "author": "Kevin Olson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acidjazz/hersh/issues"
+  },
+  "homepage": "https://github.com/acidjazz/hersh#readme",
+  "dependencies": {
+    "browser-sync": "^2.12.8",
+    "gulp-coffee": "^2.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-pug": "^3.0.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "objectus": "^1.1.1"
+  }
+}
