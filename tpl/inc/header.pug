@@ -1,1 +1,13 @@
 header
+  .inner
+    .copy
+      p free attorney consultation
+      p contact us toll free
+      p: a(href='tel:18004415545') 1-800-441-5545
+    .logo
+      .image
+      .copy Personal attention • Passionate representation
+  .menu
+    .inner
+      each option in data.menu
+        a.option(href=option.link)=option.name

@@ -1,3 +1,57 @@
 header
-  background-color pink
+  > .inner
+    padding 30px
+    max-width 1200px
+    margin auto
+    > .logo
+      //width 1614px
+      //height 178px
 
+      w = 500
+      width unit(w, px)
+      margin auto
+      > .image
+        width unit(w, px)
+        height unit(w/9, px)
+        background-image url(/img/logo.png)
+        background-size cover
+      > .copy
+        text-align center
+        gf(copy1i)
+        color gc(blue1)
+        margin 10px 0 0 0
+
+    > .copy
+      float right
+      > p
+        margin  0 0 5px 0
+        text-transform uppercase
+        text-align right
+        color gc(blue1)
+        gf(copy1s)
+        > a
+          color gc(blue1)
+          text-decoration none
+
+  > .menu
+    background-color gc(blue2)
+    text-align center
+    > .inner
+      padding 0 30px
+      max-width 1200px
+      margin auto
+      > .option
+        display inline-block
+        width 12.5%
+        color gc(white1)
+        padding 10px 0
+        text-decoration none
+        text-transform uppercase
+        gf(copy2)
+        transition background-color 0.1s linear
+        &:hover
+          background-color gc(blue1)
+        animation fadeIn 0.2s linear 0s both
+        for i in 2..8
+          &:nth-child({i})
+            animation-delay unit((0.1*i), 's')

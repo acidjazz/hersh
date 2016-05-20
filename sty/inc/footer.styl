@@ -1,0 +1,54 @@
+footer
+  background-color gc(blue1)
+  > .inner
+    padding 30px
+    max-width 1200px
+    margin auto
+
+    > .left
+      float left
+      > .logo
+        float left
+        w = 150
+        width unit(w, px)
+        height unit(w/1.31, px)
+        background-image url(/img/h.png)
+        background-size cover
+      > .copy
+        margin 20px 0 0 unit(160, px)
+        > p
+          margin 0
+          color gc(white1)
+          gf(copy1)
+    > .right
+      float right
+      > .copy
+        > p
+          gf(h3)
+          margin 0
+          color gc(white1)
+          text-transform uppercase
+          > a
+            color gc(white1)
+            text-decoration none
+      > .socials
+        margin 20px 0 0 0
+        > .social
+          float left
+          width 20px
+          height 20px
+          padding 5px
+          background-color gc(white1)
+          border-radius 50%
+          margin 0 10px 0 0
+          > svg
+            width inherit
+            height inherit
+            path
+              fill gc(blue1)
+              
+        > .copyright
+          display inline-block
+          margin 5px 0 0 0
+          color gc(white1)
+          text-transform uppercase

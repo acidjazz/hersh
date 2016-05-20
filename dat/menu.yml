@@ -1,0 +1,18 @@
+---
+  - name: home
+    link: /
+  - name: about us
+    link: /about
+  - name: attorneys
+    link: /attorneys
+  - name: practice areas
+    link: /practice
+  - name: success
+    link: /success
+  - name: firm news
+    link: /news
+  - name: contact
+    link: /contact
+
+
+

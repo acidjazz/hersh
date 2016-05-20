@@ -1,7 +1,14 @@
 ---
 copy1:
-  font-family: averta regular
+  font-family: averta light
   font-size: 14px
+copy1s:
+  font-family: averta light
+  font-size: 13px
+copy1i:
+  font-family: averta regularitalic
+  font-size: 14px
+  letter-spacing: 1px
 copy2:
   font-family: averta semibold
   font-size: 14px
@@ -21,3 +28,6 @@ h1:
 h2:
   font-family: averta bold 
   font-size: 37px
+h3:
+  font-family: averta light 
+  font-size: 29px
