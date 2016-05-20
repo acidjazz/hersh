@@ -12,21 +12,33 @@ copy1i:
 copy2:
   font-family: averta semibold
   font-size: 14px
+  letter-spacing: 1px
+copy2b:
+  font-family: averta semibold
+  font-size: 16px
+  letter-spacing: 1px
 copy3:
-  font-family: averta regular
+  font-family: averta light
   font-size: 24px
 copy4:
   font-family: averta regular
-  font-size: 19px
+  font-size: 16px
 copy5:
   font-family: averta bold
   font-size: 22px
+copy5l:
+  font-family: averta light
+  font-size: 22px
+copy6:
+  font-family: averta regularitalic
+  font-size: 24px
+  line-height: 40px
 
 h1:
   font-family: bauerbodoni italic
   font-size: 57px
 h2:
-  font-family: averta bold 
+  font-family: averta semibold 
   font-size: 37px
 h3:
   font-family: averta light 

@@ -2,7 +2,83 @@
 extends inc/layout
 
 block content
-  .content content
+  .page.home
+
+    .banner
+
+
+    .statement
+      .clear
+      .dotborder.top
+
+      .line
+        .dot.left
+        .dot.right
+
+      .copy
+        p Hersh & Hersh is a San Francisco based personal injury firm comprised of passionate and dedicated trial lawyers who provide personal attention to their clients and achieve great results.
+
+        p We represent injured people and their families in a variety of cases.
+        p We have gained national recognition for our cases and achievements
+        p as creative lawyers with incredible expertise and experience.
+
+      .line
+        .dot.left
+        .dot.right
+
+      .clear
+      .dotborder.bottom
+
+    .practice
+
+      .title
+        .copy Our Practice Areas
+        .border
+      .areas
+        each area in data.areas
+          .area
+            .icon
+              include ../pub/svg/facebook.svg
+            .copy=area.copy
+        .clear
+
+      .title
+        .copy Our Success
+        .border
+      .copy We succeed when you succeed. We work almost exclusively on a contingent fee basis. If you have been injured or harmed in some way, please contact us today by filling out our online form or calling us to arrange a free consultation with our attorneys.
+
+    .dotborder
+
+    .consultation
+
+      .title
+        .border.red
+        .border.blue
+        .copy get your free consultation now
+      .copy
+        p We provide FREE attorney consultation! If you have been harmed in some way, please contact us today by filling out our online form or call us to arrange a free consultation with our attorneys.
+
+      .form
+        .field
+          .label Name
+          .input: input(type='text',name='name')
+        .field
+          .label Email
+          .input: input(type='email',name='email')
+        .field
+          .label Phone
+          .input: input(type='phone',name='phone')
+        .field
+          .label Message
+          .input: textarea(name='textarea')
+
+        .submit submit
+
+        .consult
+          p free attorney consultation
+          p contact us toll free
+          p: a(href='tel:18004415545') 1-800-441-5545
+
 
   script(type='text/javascript').
     Loader.load('/jst/index.js', 'Index');
