@@ -1,16 +1,91 @@
 .frame
-  width 400px
-  height 500px
-  background-color pink
+  float left
+  width 475px
+  height 600px
   position relative
+  background-image url(/img/about/history.jpg)
+  background-size cover
+  background-position 50% 50%
+  > .copy
+    gf(h1)
+    color gc(white1)
+    margin 250px 0 0 0
+    text-align center
   > .border
-    width 100%
-    height 30px
+    height 20px
+    width 110%
+    left -5%
+    background-image url(/svg/border.svg)
     position absolute
     > svg
       width inherit
       height inherit
     &.top
-      top 0
+      top -5px
     &.bottom
       bottom 0
+
+
+
+.page.about
+
+  > .history
+    max-width 1000px
+    margin 50px auto
+
+    > .frame
+      float left
+      background-image url(/img/about/history.jpg)
+      margin-right 25px
+    > .copy
+      width 475px
+      float right
+      margin 100px 0 0 25px
+      gf(copy5l)
+  > .priority
+    max-width 1000px
+    margin 50px auto
+    > .banner
+      background-image url(/img/about/clients.jpg)
+      background-size cover
+      > .copy
+        gf(h1)
+        text-align center
+        color gc(white1)
+        padding 50px 0
+    > .copy
+      text-align center
+      gf(copy5l)
+
+  > .experience
+    max-width 1000px
+    margin 50px auto
+    > .frame
+      float right
+      background-image url(/img/about/experience.jpg)
+      margin-left 25px
+    > .copy
+      width 475px
+      float left
+      margin 100px 0 0 25px
+      gf(copy5l)
+
+  > .consultation
+    max-width 1000px
+    margin 50px auto
+    > .frame
+      float left
+      background-image url(/img/about/consultation.png)
+      background-size contain
+      background-repeat no-repeat
+      margin-right 25px
+      height 400px
+      > .copy
+        margin 125px 0 0 0
+    > .copy
+      float right
+      width 475px
+      margin 100px 0 0 25px
+      gf(copy5l)
+
+

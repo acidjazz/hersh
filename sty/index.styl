@@ -4,6 +4,22 @@
   background-image url(/img/dot.png)
   width 100%
 
+
+.dotborders
+  &.left > .dots.short
+    float left
+  &.right > .dots.short
+    float right
+  > .dots
+    height 5px
+    background-size 5px
+    background-image  url(/img/dot.png)
+    &.short
+      width 50%
+    &.shorter
+      width 30%
+  > .break
+    height 10px
 .page.home
 
   > .banner
