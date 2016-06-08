@@ -68,5 +68,18 @@ block content
         .clear
         .copy Free<br />Consultation
       .copy
-        p We succeed when you succeed. We work almost exclusively on a contingent fee basis. If you have been injured or harmed in some way, please contact us today by filling out our online form or calling us to arrange a free consultation with our attorneys. 
+        p We succeed when you succeed. We work almost exclusively on a contingent fee basis. If you have been injured or harmed in some way, please contact us today by filling out our online form or calling us to arrange a free consultation with our attorneys.
       .clear
+
+    .dotborder
+
+
+    .testimonials
+
+      .title Testimonials
+      each testimonial in data.testimonial
+        .testimonial
+          each line in testimonial
+            p "#{line}"
+        .stars
+          include ../../pub/svg/stars.svg
