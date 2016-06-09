@@ -77,9 +77,10 @@ block content
     .testimonials
 
       .title Testimonials
-      each testimonial in data.testimonial
+      each  testimonial, i in data.testimonial
         .testimonial
           each line in testimonial
             p "#{line}"
-        .stars
-          include ../../pub/svg/stars.svg
+        if (i+1 != data.testimonial.length)
+          .stars
+            include ../../pub/svg/stars.svg
