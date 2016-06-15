@@ -34,13 +34,15 @@ block content
         .copy Our Practice Areas
         .border
       .areas
-        each area in data.areas
+        each area, iterate in data.areas
           .area
-            .icon
-              include ../pub/svg/facebook.svg
+            .icon(style="background-image: url(/img/home/area/" + iterate + ".png);")
+              .title=area.title
             .copy=area.copy
-        .clear
 
+            a.cta(href='#') read more
+
+      .clear
       .title
         .copy Our Success
         .border

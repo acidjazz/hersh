@@ -22,7 +22,7 @@
 .page.home
 
   > .banner
-    background-image url(/img/banner1.jpg)
+    background-image url(/img/home/banner1.jpg)
     height 500px
     background-size cover
     background-position 50% 50%
@@ -85,20 +85,35 @@
       text-align center
       > .area
         width 250px
+        height 550px
         display inline-block
         margin 60px 20px 0px 20px
+        position relative
         > .icon
-          width 50px
-          height 50px
-          padding 100px
-          background-color gc(red2)
-          > svg
-            path
-              fill gc(white1)
+          width 100%
+          height 250px
+          background-size cover
+          position relative
+          &.auto
+            background-image url(/img/home/area_auto.png)
+          > .title
+            color gc(white1)
+            gf(copy2b)
+            position absolute
+            width 100%
+            bottom 10px
         > .copy
           text-align left
           padding 20px 0
           gf(copy4)
+          height 200px
+          overflow hidden
+        > .cta
+          background-color gc(blue1)
+          color gc(white1)
+          padding 10px
+          gf(copy2b)
+          text-transform uppercase
 
   > .consultation
     margin 100px auto 100px auto
