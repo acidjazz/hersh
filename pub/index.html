@@ -119,14 +119,17 @@ limitations under the License.
           <p>contact us toll free</p>
           <p><a href="tel:18004415545">1-800-441-5545</a></p>
         </div>
-        <div class="logo">
-          <div class="image"></div>
+        <div class="logo"><a class="image" href="/"></a>
           <div class="copy">Personal attention • Passionate representation</div>
         </div>
       </div>
-      <div class="menu">
+      <div class="menu off">
         <div class="inner"><a class="option" href="/">home</a><a class="option" href="/about">about us</a><a class="option" href="/attorneys">attorneys</a><a class="option" href="/practice">practice areas</a><a class="option" href="/success">success</a><a class="option" href="/news">firm news</a><a class="option" href="/contact">contact</a>
         </div>
+      </div>
+      <div class="burger on">
+        <div class="lines"><span></span><span></span><span></span><span></span></div>
+        <div class="clear"></div>
       </div>
     </header>
     <div class="container">
@@ -206,38 +209,38 @@ limitations under the License.
           <div class="copy">
             <p>We provide FREE attorney consultation! If you have been harmed in some way, please contact us today by filling out our online form or call us to arrange a free consultation with our attorneys.</p>
           </div>
-          <div class="form">
+          <form class="form" action="http://formspree.io/acidjazz@gmail.com" method="post">
             <div class="field">
               <div class="label">Name</div>
               <div class="input">
-                <input type="text" name="name">
+                <input type="text" name="name" required>
               </div>
             </div>
             <div class="field">
               <div class="label">Email</div>
               <div class="input">
-                <input type="email" name="email">
+                <input type="email" name="email" required>
               </div>
             </div>
             <div class="field">
               <div class="label">Phone</div>
               <div class="input">
-                <input type="phone" name="phone">
+                <input type="phone" name="phone" required>
               </div>
             </div>
             <div class="field">
               <div class="label">Message</div>
               <div class="input">
-                <textarea name="textarea"></textarea>
+                <textarea name="textarea" required></textarea>
               </div>
             </div>
-            <div class="submit">submit</div>
+            <input class="submit" type="submit" name="submit" value="submit">
             <div class="consult">
               <p>free attorney consultation</p>
               <p>contact us toll free</p>
               <p><a href="tel:18004415545">1-800-441-5545</a></p>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <script type="text/javascript">Loader.load('/jst/index.js', 'Index');</script>

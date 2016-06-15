@@ -11,6 +11,7 @@ header
       width unit(w, px)
       margin auto
       > .image
+        display block
         width unit(w, px)
         height unit(w/9, px)
         background-image url(/img/logo.png)
@@ -20,6 +21,8 @@ header
         gf(copy1i)
         color gc(blue1)
         margin 10px 0 0 0
+      > .mcopy
+        display none
 
     > .copy
       float right
@@ -58,4 +61,80 @@ header
 
 @media all and (min-width: 1px) and (max-width: 1000px)
   header
-    background-color orange
+    > .inner
+      padding 30px 12px 
+      > .logo
+        width 100%
+        margin 0
+        > .image
+          width 80%
+          height 60px
+          background-size contain
+          background-repeat no-repeat
+        > .copy
+          margin 0
+      > .copy
+        float none
+        display none
+    > .burger
+      position absolute
+      top 20px
+      right 20px
+      clear both
+      width 50px
+      height 45px
+      z-index 150
+      &.off > .lines > span
+        background-color gc(white1)
+      &.off > .lines > span:nth-child(1)
+        top 18px
+        width 0%
+        left 50%
+      &.off > .lines > span:nth-child(2)
+        transform rotate(45deg)
+      &.off > .lines > span:nth-child(3)
+        transform rotate(-45deg)
+      &.off > .lines > span:nth-child(4)
+        top 18px
+        width 0%
+        left 50%
+
+
+      > .lines
+        position relative
+        width 100%
+        height 100%
+        > span
+          display block
+          position absolute
+          height 9px
+          border-radius 9px
+          width 100%
+          height 9px
+          background-color gc(blue1)
+          opacity 1
+          left 0
+          transition 0.25s ease-in-out
+          &:nth-child(1)
+            top 0px
+          &:nth-child(2),
+          &:nth-child(3)
+            top 18px
+          &:nth-child(4)
+            top 36px
+    > .menu
+      position absolute
+      top 0px
+      right 0px
+      bottom 0px
+      width 100%
+      height 500vh
+      z-index 100
+      onoff()
+      > .inner
+        margin 20vh 0 0 0
+        > .option
+          display block
+          width auto
+          padding 20px
+          text-align center
