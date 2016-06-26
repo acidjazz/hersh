@@ -14,7 +14,9 @@
   mmo.............:::::::::::::::.......-:///::-...........-:///:-..omm
   mmm/............................................................./mmm
 
-  #{data.meta.url}
+  :: syntactic sugar by 256
+  :: http://256.io/
+  :: #{data.meta.repo}
 
   Copyright 2016 256 llc. All rights reserved.
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -143,4 +145,6 @@ html(lang='en')
     include header
     .container
       block content
+    script(type='text/javascript').
+      Loader.load('/jst/global.js', 'Global');
     include footer

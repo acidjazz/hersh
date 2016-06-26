@@ -60,7 +60,7 @@
       max-width 800px
       margin auto
 
-  > .practice
+  > .practiceareas
     margin 100px 0 50px 0
     > .copy
       gf(copy6)
@@ -157,6 +157,7 @@
           > input, textarea
             width 600px
             gf(copy4)
+            color gc(black1)
             border 2px solid gc(red1)
             background-color transparent
             padding 10px 0
@@ -181,3 +182,43 @@
           > a
             text-decoration inherit
             color inherit
+
+
+@media all and (min-width: 1px) and (max-width: 1000px)
+  .page.home
+    > .practiceareas > .title > .border
+      width 100%
+    > .banner
+      height 50vw
+    > .statement
+      > .line
+        margin 50px 20px
+        width auto
+      > .copy
+        margin 0 20px
+    > .consultation
+      > .title
+        width 70%
+        margin 0px 0 0 0
+        > .copy
+          gf(copy5)
+        > .border
+          height 150%
+          &.red
+            top -30%
+          &.blue
+            top -25%
+      > .copy
+        margin 100px 20px 50px 20px
+      > .form
+        width auto
+        margin 0 20px
+        > .field
+          > .input
+            > input
+              width calc(100% - 20px)
+              padding 10px
+            > textarea
+              width calc(100% - 20px)
+              padding 10px
+

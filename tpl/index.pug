@@ -28,7 +28,7 @@ block content
       .clear
       .dotborder.bottom
 
-    .practice
+    .practiceareas
 
       .title
         .copy Our Practice Areas
@@ -40,7 +40,7 @@ block content
               .title=area.title
             .copy=area.copy
 
-            a.cta(href='#') read more
+            a.cta(href='/practice#' + area.link) read more
 
       .clear
       .title
@@ -79,8 +79,4 @@ block content
           p free attorney consultation
           p contact us toll free
           p: a(href='tel:18004415545') 1-800-441-5545
-
-
-  script(type='text/javascript').
-    Loader.load('/jst/index.js', 'Index');
 

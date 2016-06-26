@@ -39,7 +39,13 @@ h1:
   font-size: 57px
 h2:
   font-family: averta semibold 
-  font-size: 37px
+  font-size: 35px
 h3:
   font-family: averta light 
   font-size: 29px
+h3i:
+  font-family: averta lightitalic
+  font-size: 29px
+h4:
+  font-family: bauerbodoni italic
+  font-size: 32px

@@ -16,6 +16,7 @@ footer
         background-size cover
       > .copy
         margin 20px 0 0 unit(160, px)
+        text-decoration none
         > p
           margin 0
           color gc(white1)
@@ -57,3 +58,26 @@ footer
           margin 5px 0 0 0
           color gc(white1)
           text-transform uppercase
+
+@media all and (min-width: 1px) and (max-width: 1000px)
+  footer
+    > .inner
+      > .left
+        float none
+        > .logo
+          w = 90
+          width unit(w, px)
+          height unit(w/1.31, px)
+        > .copy
+          float right
+          margin 0
+          padding 0
+      > .right
+        clear both
+        float none
+        text-align center
+        > .copy
+          margin 100px 10px 10px 10px
+        > .socials > .copyright
+          display block
+          text-align right

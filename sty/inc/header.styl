@@ -35,10 +35,16 @@ header
         > a
           color gc(blue1)
           text-decoration none
+      > p
+        animation cellInY 0.2s linear 0s both
+        for i in 1..3
+          &:nth-child({i})
+            animation-delay unit((0.1*i), 's')
 
   > .menu
     background-color gc(blue1)
     text-align center
+    animation fadeIn 0.2s linear 0s both
     > .inner
       max-width 1200px
       margin auto
@@ -53,10 +59,10 @@ header
         transition background-color 0.1s linear
         &:hover
           background-color gc(blue2)
-        animation fadeIn 0.2s linear 0s both
-        for i in 2..8
+        animation cellOutY 0.2s linear 0.2s both
+        for i in 1..8
           &:nth-child({i})
-            animation-delay unit((0.1*i), 's')
+            animation-delay unit((0.05*i)+0.1, 's')
 
 
 @media all and (min-width: 1px) and (max-width: 1000px)
@@ -67,7 +73,7 @@ header
         width 100%
         margin 0
         > .image
-          width 80%
+          width 75%
           height 60px
           background-size contain
           background-repeat no-repeat
@@ -98,7 +104,6 @@ header
         top 18px
         width 0%
         left 50%
-
 
       > .lines
         position relative
@@ -132,9 +137,15 @@ header
       z-index 100
       onoff()
       > .inner
-        margin 20vh 0 0 0
+        margin 10vh 0 0 0
         > .option
           display block
           width auto
-          padding 20px
+          padding 15px
           text-align center
+          gf(h2)
+
+@media all and (min-width: 1px) and (max-width: 321px)
+  header > .menu > .inner > .option
+    padding 15px
+    gf(copy2b)

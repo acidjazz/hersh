@@ -1,9 +1,5 @@
 .frame
-  float left
-  width 475px
-  height 600px
   position relative
-  background-image url(/img/about/history.jpg)
   background-size cover
   background-position 50% 50%
   > .copy
@@ -36,6 +32,8 @@
       float left
       background-image url(/img/about/history.jpg)
       margin-right 25px
+      width 475px
+      height 600px
     > .copy
       width 475px
       float right
@@ -108,3 +106,30 @@
           fill gc(red1)
 
 
+@media all and (min-width: 1px) and (max-width: 1000px)
+  .page.about
+    > .history, > .experience
+      > .frame
+        float none
+        width 300px
+        height 400px
+        margin auto
+        > .copy
+          margin 100px 20px 0 20px
+      > .copy
+        margin 10px 20px
+        width auto
+        float none
+    > .experience > .frame > .copy
+      margin 30px 20px 0 20px
+    > .consultation
+      > .frame
+        margin auto
+        float none
+        height 290px
+        > .copy
+          margin 75px 0 0 0
+      > .copy
+        float none
+        margin 20px
+        width auto

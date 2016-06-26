@@ -1,0 +1,199 @@
+.practice
+  margin auto
+  padding 50px 0
+  > .banner
+    background-image url(/img/practice/banner.jpg)
+    height 500px
+    background-size cover
+    background-position 50% 50%
+    color gc(white1)
+    text-align center
+    > .title
+      gf(h1)
+      padding 150px 0 0 0
+    > .copy
+      gf(h4)
+      max-width 1000px
+      margin auto
+  > .summary
+      max-width 900px
+      margin 50px auto
+      color gc(blue1)
+      > .desc
+        margin 0 0 0 275px
+        > .title
+          gf(h1)
+          text-align center
+        > .copy
+          color gc(black1)
+      > .categories
+        float left
+        width 250px
+        text-align right
+        margin 25px 25px 0 0
+        > .title 
+          color gc(blue1)
+          gf(copy2b)
+          text-transform uppercase
+          margin 0 0 50px 0
+        > .jumps
+          > .jump
+            display block
+            margin 0 0 10px 0
+            gf(copy2)
+            color gc(blue1)
+            text-decoration none
+
+  > .areas
+    > a
+      display block
+      height 10px
+    > .area
+      > .summary
+        max-width 900px
+        margin 50px auto
+        > .desc
+          > .title
+            gf(h2)
+            color gc(red2)
+            text-align center
+          > .copy
+            margin 50px 0
+        > .icon
+          float left
+          width 300px
+          height 300px
+          margin 150px 0 0 0
+          &.icon.auto > .inner
+            background-image url('/img/home/area/0.png')
+          &.icon.property > .inner
+            background-image url('/img/home/area/1.png')
+            background-position 50% 25%
+          &.icon.malpractice
+            height 400px
+          &.icon.malpractice > .inner
+            background-image url('/img/home/area/2.png')
+            background-position 50% 0%
+          &.icon.employment > .inner
+            background-image url('/img/home/area/3.png')
+            background-position 50% 0%
+            background-size 130%
+          &.icon.danger > .inner
+            background-image url('/img/home/area/4.png')
+          > .inner
+            background-size 150%
+            background-position 50% 0%
+            width 200px
+            min-height 200px
+            border-radius 100px
+
+      > .highlights
+        background-color gc(blue1)
+        color gc(white1)
+        padding 50px 0
+        > .inner
+          max-width 960px
+          margin 0 auto
+          > .list
+            column-count 3
+            column-gap 10px
+            margin auto
+            &.list.one
+              column-count 1
+              width 600px
+              margin auto
+            &.list.semilong > ul > li
+              break-inside avoid-column
+              > ul > li
+                break-inside avoid-column
+            &.list.long > ul > li
+              break-inside auto
+              > ul > li
+                break-inside avoid-column
+                > ul > li
+                  break-inside avoid-column
+            > ul
+              padding 0 10px 
+              margin 0
+              > li
+                break-inside avoid-column
+                margin 0
+                > ul
+                  padding 0 10px 
+                  margin 0
+                  > li
+                    margin 0
+                    > ul
+                      padding 0 10px 
+                      margin 0
+                      > li
+                        margin 0
+
+          > .title
+            gf(h3)
+            text-transform uppercase
+            margin 0 0 50px 0
+            text-align center
+
+          > .copy
+            gf(copy1i)
+      > .examples
+        max-width 900px
+        margin 50px auto
+        > .image
+          background-size cover
+          &.right
+            float right
+          &.left
+            float left
+          &.property
+            background-image url(/img/practice/success2.png)
+            width 350px
+            height 450px
+          &.employment
+            background-image url(/img/practice/success4.png)
+            width 450px
+            height 550px
+        > .frame
+          &.malpractice > .image
+            background-image url(/img/practice/success3.png)
+            width 380px
+            height 320px
+          &.auto > .image
+            background-image url(/img/practice/success1.png)
+            width 350px
+            height 350px
+          &.danger > .image
+            background-image url(/img/practice/success5.png)
+            width 400px
+            height 300px
+          &.right
+            float right
+          &.left
+            float left
+          > .image
+            background-size cover
+        > .desc
+          min-height 450px
+          &.tall
+            min-height 550px
+            margin 0 550px 0 0 !important
+            > .title
+              padding 100px 0 0 0
+          &.left
+            margin 0 450px 0 0
+          &.right
+            margin 0 0 0 450px
+          &.property
+            padding-top 50px
+          > .title
+            gf(h3i)
+            color gc(red2)
+            text-transform uppercase
+
+          > .stars
+            width 100px
+            margin 50px auto
+            > svg > path
+              fill gc(red1)
+
