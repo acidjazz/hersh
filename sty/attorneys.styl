@@ -9,6 +9,10 @@
   > .title
     color gc(blue1)
     gc(blue1)
+
+  > .copy > ul.custom
+    margin-left 410px
+
   > .picture
     background-size cover
     &.nancy
@@ -48,3 +52,14 @@
       float left
       margin 20px 20px 0 0
 
+@media all and (min-width: 1px) and (max-width: 1000px)
+  .attorney
+    > .picture
+      float none !important
+      margin 0 !important
+    > .name, > .title, > .copy
+      padding 0 10px
+    > .name
+      padding 25px 10px 0 10px
+    > .copy > ul.custom
+      margin-left 0

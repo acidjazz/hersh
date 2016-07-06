@@ -1,0 +1,38 @@
+
+.success
+  margin auto
+  padding 50px 0
+  > .banner
+    background-image url(/img/success/banner.png)
+    height 500px
+    background-size cover
+    background-position 50% 50%
+    color gc(white1)
+    text-align center
+    > .title
+      gf(h1)
+      padding 150px 0 0 0
+    > .copy
+      gf(h3i)
+      max-width 1000px
+      margin auto
+  .copy
+    max-width 900px
+    padding 25px 0
+    margin auto
+    > .title
+      gf(h3)
+      color gc(red1)
+      padding 25px 0
+    > p
+      gf(copy1)
+      &.b
+        gf(copy2)
+        
+
+@media all and (min-width: 1px) and (max-width: 1000px)
+  .success
+    > .copy
+      padding 25px 10px
+
+

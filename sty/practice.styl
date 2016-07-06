@@ -12,7 +12,7 @@
       gf(h1)
       padding 150px 0 0 0
     > .copy
-      gf(h4)
+      gf(h3i)
       max-width 1000px
       margin auto
   > .summary
@@ -197,3 +197,52 @@
             > svg > path
               fill gc(red1)
 
+@media all and (min-width: 1px) and (max-width: 1000px)
+  .practice
+    > .banner
+      > .title
+        padding 50px 0 0 0
+    > .summary
+      > .categories
+        float none
+        width auto
+        margin 25px
+        > .title
+          text-align left
+        > .jumps > .jump
+          text-align left
+      > .desc
+        margin 10px
+    > .areas
+      > .area
+        > .summary
+          margin 0px auto
+          > .icon
+            float none
+            margin 50px auto 50px auto
+            width 200px
+            height 200px !important
+          > .desc
+            padding 10px
+
+        > .highlights
+          > .inner
+            > .list
+              column-count 1
+              margin 0 0 0 20px
+            > .copy
+              padding 10px
+
+        > .examples
+          > .frame
+            float none !important
+          > .image
+            margin 0 10px
+            width auto !important
+            float none !important
+          > .desc
+            float none !important
+            margin 25px 10px !important
+            padding 0px !important
+            &.tall
+              margin 25px 10px !important
