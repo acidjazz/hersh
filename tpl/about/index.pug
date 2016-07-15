@@ -52,9 +52,8 @@ block content
         .copy Our Experience<br />Shows In<br />Our Results
       .copy
 
-        p We are creative, compassionate trial lawyers with a record of success, years of experience and expert skills. We have successfully tried and settled hundreds of cases, including resolving cases for millions.
-        p We have prevailed on appeal, resulting in
-        p published appellate opinions that have changed the law. Our passionate representation has led to historic results inside and outside the courtroom.
+        p We are creative, compassionate trial lawyers with a record of success, years of experience and expert skills. We have successfully tried and/or settled thousands of cases, including resolving cases for millions of dollars.
+        p We have prevailed on appeal, resulting in published appellate opinions that have changed the law. Our passionate representation has led to historic results inside and outside the courtroom.
 
       .clear
 
@@ -64,11 +63,10 @@ block content
         .clear
         .copy Free<br />Consultation
       .copy
-        p We succeed when you succeed. We work almost exclusively on a contingent fee basis. If you have been injured or harmed in some way, please contact us today by filling out our online form or calling us to arrange a free consultation with our attorneys.
+        p We succeed when you succeed. We work almost exclusively on a contingent fee basis. If you have been injured or harmed in some way, please contact us today by filling out our <a href="/#form">online form</a> or <a href="tel:#{data.meta.phone}">calling us</a> to arrange a free consultation with our attorneys.
       .clear
 
     .dotborder
-
 
     .testimonials
 
@@ -76,7 +74,7 @@ block content
       each  testimonial, i in data.testimonial
         .testimonial
           each line in testimonial
-            p "#{line}"
+            p "!{line}"
         if (i+1 != data.testimonial.length)
           .stars
             include ../../pub/svg/stars.svg
