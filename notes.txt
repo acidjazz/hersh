@@ -1,6 +1,0 @@
-- main background is white1
-- fonts
- - averta std *
- - bauer bodoni
- - 
-

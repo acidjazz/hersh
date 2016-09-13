@@ -1,0 +1,80 @@
+
+extends ../extends/layout
+
+block content
+  .page.about
+
+    .history
+
+      .frame
+        .border.top
+        .border.bottom
+        .image
+        .clear
+        .copy A History of<br /> Success
+      .copy
+        p Hersh & Hersh was founded over four decades ago by a fearless and compassionate father and daughter team, LeRoy Hersh (1920-2003) and Nancy Hersh. Nancy and LeRoy started Hersh & Hersh to provide dedicated legal representation to people and their families who had been injured or harmed in some way.
+        p Nancy and LeRoy shared the practice and the drive to obtain justice for injured people. They achieved incredible successes. The team at Hersh & Hersh carries the founding legacy and values forward in their practice today.
+      .clear
+
+    .dotborders.right
+      .dots.short
+      .break
+      .clear
+      .dots.long
+      .dots.long
+      .clear
+
+    .priority
+
+      .banner
+        .copy Our Clients Are<br /> Our Priority
+
+      .copy
+        p We do personal injury work because we want to help.
+        p We offer creative and aggressive representation from the moment a case comes to our office through trial and appeal. Each of our cases is handled with personal care, attention and support by a team of lawyers and staff. When you call our office, you will speak directly with one of our lawyers. When you come visit our office, you will enter a warm environment, may even be greeted by one of the partners’ small dogs, and will often meet with a team of attorneys instead of just one.
+        p We are passionate about achieving the best result for our clients and are dedicated to fighting hard for justice.
+
+    .dotborders.left
+      .dots.short
+      .break
+      .clear
+      .dots.shorter
+      .dots.shorter
+      .clear
+
+    .experience
+      .frame
+        .border.top
+        .border.bottom
+        .image
+        .clear
+        .copy Our Experience<br />Shows In<br />Our Results
+      .copy
+
+        p We are creative, compassionate trial lawyers with a record of success, years of experience and expert skills. We have successfully tried and/or settled thousands of cases, including resolving cases for millions of dollars.
+        p We have prevailed on appeal, resulting in published appellate opinions that have changed the law. Our passionate representation has led to historic results inside and outside the courtroom.
+
+      .clear
+
+    .consultation
+      .frame
+        .image
+        .clear
+        .copy Free<br />Consultation
+      .copy
+        p We succeed when you succeed. We work almost exclusively on a contingent fee basis. If you have been injured or harmed in some way, please contact us today by filling out our <a href="/#form">online form</a> or <a href="tel:#{config.meta.phone}">calling us</a> to arrange a free consultation with our attorneys.
+      .clear
+
+    .dotborder
+
+    .testimonials
+
+      .title Testimonials
+      each  testimonial, i in config.testimonial
+        .testimonial
+          each line in testimonial
+            p "!{line}"
+        if (i+1 != config.testimonial.length)
+          .stars
+            include ../../vector/stars.svg

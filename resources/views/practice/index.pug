@@ -1,0 +1,40 @@
+extends ../extends/layout
+
+block content
+  .page.practice
+    .banner
+      .title Practice Areas
+      .copy The firm prides itself on its passionate representation of its clients, taking a level of personal interest in every client and every case. This personal attention sets the firm apart and creates a culture of care and concern that is unsurpassed. And our results are, in fact, historic.
+
+    .summary
+      .categories
+        .title categories
+        .jumps
+          a.jump(href="#auto") Auto, Bicycle, Pedestrian &amp; Other Personal Inury Accidents
+          a.jump(href="#property") Dangerous Property Conditions
+          a.jump(href="#malpractice") Professional Liability Malpractice (Medical, Legal, &amp; Other)
+          a.jump(href="#employment") Employment Law
+          a.jump(href="#danger") Dangerous &amp; Defective Products/Devices
+      .desc
+        .title Our Practice Areas
+        .copy
+          p Hersh & Hersh has represented clients from all over the United States in individual cases, mass tort litigation and other personal injury matters for nearly 40 years. It is not surprising that one of the firm's founders received a 2010 lifetime achievement award from the San Francisco Trial Lawyers Association for groundbreaking work.
+          p The trial lawyers at Hersh & Hersh collectively have decades upon decades of experience in these areas. When you contact our law firm for an evaluation of your situation, you will speak with an attorney and it is free of charge.
+      .clear
+
+    .dotborders
+      .dots.long
+      .dots.long
+      .clear
+
+    .areas
+      a(name="auto")
+      include area_auto.pug
+      a(name="property")
+      include area_property.pug
+      a(name="malpractice")
+      include area_malpractice.pug
+      a(name="employment")
+      include area_employment.pug
+      a(name="danger")
+      include area_danger.pug

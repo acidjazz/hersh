@@ -1,0 +1,227 @@
+.dotborder
+  height 10px
+  background-size 5px
+  background-image url(/img/dot.png)
+  width 100%
+
+.dotborders
+  &.left > .dots
+    float left
+  &.right > .dots
+    float right
+  > .dots
+    height 5px
+    background-size 5px
+    background-image  url(/img/dot.png)
+    &.short
+      width 50%
+    &.shorter
+      width 30%
+  > .break
+    height 10px
+.page.home
+
+  > .banner
+    background-image url(/img/home/banner1.jpg)
+    height 500px
+    background-size cover
+    background-position 50% 50%
+
+  > .statement
+    margin 20px 0
+    background-image url(/img/texture1.jpg)
+    background-size cover
+    position relative
+    > .dotborder
+      position absolute
+      &.top
+        top -5px
+      &.bottom
+        bottom -5px
+    > .line
+      width 500px
+      margin 50px auto
+      height 2px
+      background-color gc(white1)
+      > .dot
+        width 5px
+        height 5px
+        border-radius 50%
+        background-color gc(white1)
+        margin -2px 0 0 0
+        &.left
+          float left
+        &.right
+          float right
+    > .copy
+      gf(copy3)
+      color gc(white1)
+      text-align center
+      max-width 800px
+      margin auto
+
+  > .practiceareas
+    margin 100px 0 50px 0
+    > .copy
+      gf(copy6)
+      text-align center
+      max-width 800px
+      margin 50px auto
+    > .title
+      > .copy
+        gf(h1)
+        text-align center
+        color gc(blue1)
+
+      > .border
+        height 20px
+        width 500px
+        margin auto
+        background-image url(/svg/border.svg)
+
+    > .areas
+      max-width 900px
+      margin 0 auto 50px auto
+      text-align center
+      > .area
+        width 250px
+        height 550px
+        display inline-block
+        margin 60px 20px 0px 20px
+        position relative
+        > .icon
+          width 100%
+          height 250px
+          background-size cover
+          position relative
+          &.auto
+            background-image url(/img/home/area_auto.png)
+          > .title
+            color gc(white1)
+            gf(copy2b)
+            position absolute
+            width 100%
+            bottom 10px
+        > .copy
+          text-align left
+          padding 20px 0
+          gf(copy4)
+          height 200px
+          line-height 20px
+          overflow hidden
+        > .cta
+          background-color gc(blue1)
+          color gc(white1)
+          padding 10px
+          gf(copy2b)
+          text-transform uppercase
+
+  > .consultation
+    margin 100px auto 100px auto
+    text-align center
+    > .title
+      position relative
+      display inline-block
+      > .border
+        position absolute
+        width 120%
+        height 300%
+        left -10%
+        top -110%
+        &.red
+          border 2px solid gc(red1)
+          left -11%
+          top -130%
+        &.blue
+          border 2px solid gc(blue1)
+          left -8%
+          top -90%
+      > .copy
+        gf(h2)
+        text-transform uppercase
+        color gc(blue1)
+    > .copy
+      gf(copy6)
+      margin 100px auto
+      max-width 700px
+
+    > .form
+      width 600px
+      margin auto
+      > .field
+        > .label
+          color gc(red1)
+          text-align left
+          gf(copy5l)
+          padding 10px 0
+        > .input
+          > input, textarea
+            width 600px
+            gf(copy4)
+            color gc(black1)
+            border 2px solid gc(red1)
+            background-color transparent
+            padding 10px 0
+            outline none
+          > textarea
+            height 100px
+      > .submit
+        gf(copy2b)
+        display inline-block
+        margin 30px 0
+        padding 25px 100px
+        background-color gc(blue1)
+        color gc(white1)
+        text-transform uppercase
+        border none
+      > .consult
+        > p
+          margin 10px
+          text-transform uppercase
+          gf(h3)
+          color gc(blue1)
+          > a
+            text-decoration inherit
+            color inherit
+
+
+@media all and (min-width: 1px) and (max-width: 1000px)
+  .page.home
+    > .practiceareas > .copy
+      padding 10px
+    > .practiceareas > .title > .border
+      width 100%
+    > .banner
+      height 50vw
+    > .statement
+      > .line
+        margin 50px 20px
+        width auto
+      > .copy
+        margin 0 20px
+    > .consultation
+      > .title
+        width 70%
+        margin 0px 0 0 0
+        > .copy
+          gf(copy5)
+        > .border
+          height 150%
+          &.red
+            top -30%
+          &.blue
+            top -25%
+      > .copy
+        margin 100px 20px 50px 20px
+      > .form
+        width auto
+        margin 0 20px
+        > .field
+          > .input
+            > input
+              width calc(100% - 20px)
+              padding 10px
+            > textarea
+              width calc(100% - 20px)
+              padding 10px
+

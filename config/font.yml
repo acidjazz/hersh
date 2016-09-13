@@ -1,0 +1,51 @@
+---
+copy1:
+  font-family: averta regular
+  font-size: 16px
+copy1s:
+  font-family: averta light
+  font-size: 13px
+copy1i:
+  font-family: averta regularitalic
+  font-size: 14px
+  letter-spacing: 1px
+copy2:
+  font-family: averta semibold
+  font-size: 14px
+  letter-spacing: 1px
+copy2b:
+  font-family: averta semibold
+  font-size: 16px
+  letter-spacing: 1px
+copy3:
+  font-family: averta light
+  font-size: 22px
+copy4:
+  font-family: averta regular
+  font-size: 16px
+copy5:
+  font-family: averta bold
+  font-size: 22px
+copy5l:
+  font-family: averta light
+  font-size: 22px
+copy6:
+  font-family: averta regularitalic
+  font-size: 24px
+  line-height: 40px
+
+h1:
+  font-family: bauerbodoni italic
+  font-size: 57px
+h2:
+  font-family: averta semibold 
+  font-size: 35px
+h3:
+  font-family: averta light 
+  font-size: 29px
+h3i:
+  font-family: averta lightitalic
+  font-size: 29px
+h4:
+  font-family: bauerbodoni italic
+  font-size: 32px
