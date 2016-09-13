@@ -1,3 +1,3 @@
-![](pub/img/share.jpg)
+![](hersh.gif)
 > *Note*: currenty in early development
 

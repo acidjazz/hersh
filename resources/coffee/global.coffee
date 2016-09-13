@@ -11,8 +11,8 @@ Global =
 
   mobile: ->
 
-    _.swap '.menu', '.burger'
-    console.log 'Global.mobile()'
+    _.swap '.menu'
+    _.swap '.burger'
 
 
   email: ->
