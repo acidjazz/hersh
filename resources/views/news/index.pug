@@ -1,0 +1,17 @@
+
+extends ../extends/layout
+
+block content
+  .page.news
+    .summary
+      each article,i in config.news
+        .article
+          .image IMG #{i}
+          .title=article.title
+    .articles
+      each article in config.news
+        .article
+          .image image placeholder
+          .title=article.title 
+          .description=article.description
+          a.link(href=article.link) READ MORE

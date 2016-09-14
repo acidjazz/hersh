@@ -30,6 +30,7 @@ objectify = ->
   objectus 'config/', (error, result) ->
     notify error if error
     config = result
+    console.log config.news.length
   return config
 
 config = objectify()
