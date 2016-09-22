@@ -6,12 +6,12 @@ block content
     .summary
       each article,i in config.news
         .article
-          .image IMG #{i}
+          .image(style="background-image: url(/img/news/" + article.image + ");")
           .title=article.title
     .articles
-      each article in config.news
+      each article,i in config.news
         .article
-          .image image placeholder
+          .image(style="background-image: url(/img/news/" + article.image + ");")
           .title=article.title 
-          .description=article.description
-          a.link(href=article.link) READ MORE
+          .description=article.conten
+          a.link(href='/news/' + i) READ MORE
