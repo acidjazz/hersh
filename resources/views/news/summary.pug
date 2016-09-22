@@ -1,0 +1,5 @@
+.summary
+  each article,i in config.news
+    a.article(href='/news/' + i)
+      .image(style="background-image: url(/img/news/" + article.image + ");")
+      .title=article.title

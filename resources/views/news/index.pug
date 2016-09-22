@@ -3,11 +3,7 @@ extends ../extends/layout
 
 block content
   .page.news
-    .summary
-      each article,i in config.news
-        .article
-          .image(style="background-image: url(/img/news/" + article.image + ");")
-          .title=article.title
+    include summary
     .articles
       each article,i in config.news
         .article

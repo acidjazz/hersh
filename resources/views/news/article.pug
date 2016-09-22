@@ -1,6 +1,8 @@
 .page.newsdetail
-  .image(style="background-image: url(/img/news/" + article.image + ");")
-  .title=article.title
-  .content
-    each p in article.content
-      p !{p}
+  include summary
+  .article
+    .image(style="background-image: url(/img/news/" + article.image + ");")
+    .title=article.title
+    .content
+      each p in article.content
+        p !{p}
