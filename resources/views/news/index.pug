@@ -4,10 +4,21 @@ extends ../extends/layout
 block content
   .page.news
     include summary
-    .articles
+    .articles.on
       each article,i in config.news
-        .article
+        a.article(href='/news/' + i)
           .image(style="background-image: url(/img/news/" + article.image + ");")
           .title=article.title 
           .description=article.conten
-          a.link(href='/news/' + i) READ MORE
+          .link(href='/news/' + i) READ MORE
+    .presses.off
+      each article in config.press
+        .press
+          .iframe !{article.iframe}
+          .title=article.title
+          a.link(href=article.link,target='_new') read more
+
+    .clear
+
+  script.
+    News.i()

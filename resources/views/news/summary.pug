@@ -1,4 +1,9 @@
-.summary
+.newsummary
+  .smenu
+    a.option.option_blog(href='/news#blog',data-type='blog') blog
+    .clear
+    a.option.option_press(href='/news#press',data-type='press') press
+
   each article,i in config.news
     a.article(href='/news/' + i)
       .image(style="background-image: url(/img/news/" + article.image + ");")

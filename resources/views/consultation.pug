@@ -1,0 +1,31 @@
+.consultation
+
+  a(id="form")
+  .title
+    .border.red
+    .border.blue
+    .copy get your free consultation now
+  .copy
+    p We provide FREE attorney consultation! If you have been harmed in some way, please contact us today by filling out our online form or call us to arrange a free consultation with our attorneys.
+
+  form.form(action="http://formspree.io/acidjazz@gmail.com",method="post")
+    .field
+      .label Name
+      .input: input(type='text',name='name' required)
+    .field
+      .label Email
+      .input: input(type='email',name='email' required)
+    .field
+      .label Phone
+      .input: input(type='phone',name='phone' required)
+    .field
+      .label Message
+      .input: textarea(name='textarea' required)
+
+    input.submit(type='submit',name='submit',value='submit')
+
+    .consult
+      p free attorney consultation
+      p contact us toll free
+      p: a(href='tel:18004415545') 1-800-441-5545
+

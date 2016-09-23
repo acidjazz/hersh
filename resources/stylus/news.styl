@@ -1,10 +1,38 @@
-.summary
+.newsummary
   float left
-  width 140px
+  width 160px
+  > .smenu
+    margin 0 0 20px 0
+    border-bottom 1px solid gc(blue1)
+    text-align center
+    > .option
+      display inline-block
+      clear both
+      cursor pointer
+      text-transform uppercase
+      padding 0 0 5px 0
+      margin 0 0 10px 0
+      border-bottom 1px solid transparent
+      color gc(black1)
+      text-decoration none
+      &:hover
+        border-bottom 1px solid rgba(gc(blue1), 0.5)
+      &.on
+        border-bottom 1px solid gc(blue1)
   > .article
+    display block
+    clear both
+    overflow hidden
     text-decoration none
+    padding 10px
+    transition background-color 0.1s linear 0s, color 0.1s linear 0.1s
+    border-radius 2px
+    &:hover
+      background-color gc(blue1)
+      color gc(white1)
     > .image
-      background-color gc(red1)
+      margin auto
+      background-color gc(blue1)
       background-size cover
       width 140px
       height 100px
@@ -13,7 +41,7 @@
       color gc(white1)
     > .title
       gf(copy1s)
-      padding 10px 0
+      padding 10px
       white-space nowrap
       overflow hidden
       text-overflow ellipsis
@@ -22,11 +50,28 @@
 .news
   max-width 1000px
   margin 50px auto
+  > .presses
+    margin 0 0 0 190px
+    onoff()
+    > .press
+      > .title
+        gf(copy3)
+        padding 0 0 10px 0
+      > .iframe
+        padding 0 0 10px 0
+      > .link
+        display block
+        text-transform uppercase
+        padding 0 0 20px 0
+
   > .articles
-    margin 0 0 0 180px
+    margin 0 0 0 190px
+    onoff()
 
     > .article
       padding 0 0 20px 0
+      display block
+      text-decoration none
       > .image
         height 300px
         line-height 300px
@@ -35,9 +80,11 @@
       > .title
         gf(copy3)
         padding 10px 0
+        color gc(black1)
       > .link
-        display block
-        padding 10px 0
+        padding 10px 0 0 0
+        text-decoration underline
+
 
 @media all and (min-width: 1px) and (max-width: 1000px)
   .news
