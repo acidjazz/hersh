@@ -17,6 +17,11 @@ copy2b:
   font-family: averta semibold
   font-size: 16px
   letter-spacing: 1px
+copy2bi:
+  font-family: averta semibolditalic
+  font-size: 16px
+  letter-spacing: 1px
+
 copy3:
   font-family: averta light
   font-size: 22px

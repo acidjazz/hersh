@@ -10,6 +10,11 @@
     color gc(blue1)
     gc(blue1)
 
+  > .copy .b
+    gf(copy2bi)
+    padding 0
+    margin 0 0 0 0
+
   > .copy > ul.custom
     margin-left 410px
 
@@ -20,30 +25,30 @@
       width 400px
       height 500px
       background-position 0% 50%
-    &.kate
-      background-image url('/img/attorneys/kate.jpg')
-      width 400px
-      height 400px
-      background-position 0% 50%
-    &.charles
-      background-image url('/img/attorneys/charles.jpg')
-      width 400px
-      height 500px
-      background-position 0% 100%
     &.mark
       background-image url('/img/attorneys/mark.jpg')
       width 400px
+      height 780px
+      background-position 0% 100%
+    &.charles
+      background-image url('/img/attorneys/charles.jpg')
+      width 400px
       height 700px
       background-position 0% 100%
+    &.kate
+      background-image url('/img/attorneys/kate.jpg')
+      width 400px
+      height 370px
+      background-position 0% 50%
     &.brendan
       background-image url('/img/attorneys/brendan.jpg')
       width 400px
       height 700px
-      background-position 0% 100%
+      background-position 50% 100%
     &.nuala
       background-image url('/img/attorneys/nuala.jpg')
       width 400px
-      height 400px
+      height 460px
       background-position 0% 25%
     &.right
       float right
@@ -54,9 +59,17 @@
 
 @media all and (min-width: 1px) and (max-width: 1000px)
   .attorney
+    margin 0 20px
     > .picture
       float none !important
       margin 0 !important
+      width auto !important
+      height 300px !important
+      background-position 0% 0% !important
+      &.kate
+        background-position 0% 50% !important
+      &.brendan
+        background-position 0% 25% !important
     > .name, > .title, > .copy
       padding 0 10px
     > .name
