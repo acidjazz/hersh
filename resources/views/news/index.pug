@@ -14,7 +14,10 @@ block content
     .presses.off
       each article in config.press
         .press
-          .iframe !{article.iframe}
+          if article.iframe
+            .iframe !{article.iframe}
+          if article.image
+            .image(style="background-image: url(" + article.image + ");")
           .title=article.title
           a.link(href=article.link,target='_new') read more
 
