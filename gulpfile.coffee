@@ -25,17 +25,13 @@ dirs =
   stylus: 'resources/stylus'
   svg:    'resources/vector'
 
-objectify = ->
-  config = {}
+config = {}
+objectify = (complete) ->
   objectus 'config/', (error, result) ->
     notify error if error
     config = result
-    console.log config.news.length
-  return config
-
-config = objectify()
-
-gulp.task 'objectus', objectify
+    fs.writeFileSync(dirs.coffee + '/config.coffee', "config = " + JSON.stringify(config) + ";", 'utf8')
+    complete?()
 
 gulp.task 'goprod', ->
   env = 'prod'
@@ -50,56 +46,57 @@ gulp.task 'vendor', ->
 
 gulp.task 'coffee', ->
 
-  fs.writeFileSync('public/js/config.js', "var config = " + JSON.stringify(config) + ";", 'utf8')
-
-  gulp.src(dirs.coffee + '/*.coffee')
-    .pipe(gulpif(env == 'dev', sourcemaps.init(loadMaps: true)))
-    .pipe(coffee(bare: true)
-      .on('error', notify.onError((error) ->
-        title: "Coffee error"
-        message: error.message + "\r\n" + error.filename + ':' + error.location.first_line
-        sound: 'Pop'
-      )))
-    .pipe(gulpif(env != 'dev',uglify()))
-    .pipe(concat('bundle.js'))
-    .pipe(gulpif(env == 'dev',sourcemaps.write()))
-    .pipe(gulp.dest('./public/js'))
-    .pipe(sync.stream())
+  objectify ->
+    gulp.src(dirs.coffee + '/*.coffee')
+      .pipe(gulpif(env == 'dev', sourcemaps.init(loadMaps: true)))
+      .pipe(coffee(bare: true)
+        .on('error', notify.onError((error) ->
+          title: "Coffee error"
+          message: error.message + "\r\n" + error.filename + ':' + error.location.first_line
+          sound: 'Pop'
+        )))
+      .pipe(gulpif(env != 'dev',uglify()))
+      .pipe(concat('bundle.js'))
+      .pipe(gulpif(env == 'dev',sourcemaps.write()))
+      .pipe(gulp.dest('./public/js'))
+      .pipe(sync.stream())
 
 gulp.task 'stylus', ->
-  gulp.src(dirs.stylus + '/main.styl')
-    .pipe(gulpif(env == 'dev',sourcemaps.init(loadMaps: true)))
-    .pipe(stylus(rawDefine: config: config)
-    .on('error', notify.onError((error) ->
-      title: 'Stylus error: ' + error.name
-      message: error.message
-      sound: 'Pop'
-    )))
-    .pipe(gulpif(env != 'dev',clean()))
-    .pipe(gulpif(env == 'dev',sourcemaps.write()))
-    .pipe(gulp.dest('public/css/'))
-    .pipe(sync.stream())
+  objectify ->
+    gulp.src(dirs.stylus + '/main.styl')
+      .pipe(gulpif(env == 'dev',sourcemaps.init(loadMaps: true)))
+      .pipe(stylus(rawDefine: config: config)
+      .on('error', notify.onError((error) ->
+        title: 'Stylus error: ' + error.name
+        message: error.message
+        sound: 'Pop'
+      )))
+      .pipe(gulpif(env != 'dev',clean()))
+      .pipe(gulpif(env == 'dev',sourcemaps.write()))
+      .pipe(gulp.dest('public/css/'))
+      .pipe(sync.stream())
 
 gulp.task 'pug', ->
-  gulp.src(dirs.pug + '/**/index.pug')
-    .pipe(pug(
-      pretty: true
-      locals:
-        config: config
-    ).on('error', notify.onError((error) ->
-      title: 'Pug error: ' + error.name
-      message: error.message
-      sound: 'Pop'
-    )))
-    .pipe(gulpif(env != 'dev',htmlmin(
-      collapseWhitespace: true
-      processScripts: ['application/ld+json', 'text/javascript']
-    )))
-    .pipe(gulp.dest('public'))
-    .pipe sync.stream()
+  objectify ->
+    gulp.src(dirs.pug + '/**/index.pug')
+      .pipe(pug(
+        pretty: true
+        locals:
+          config: config
+      ).on('error', notify.onError((error) ->
+        title: 'Pug error: ' + error.name
+        message: error.message
+        sound: 'Pop'
+      )))
+      .pipe(gulpif(env != 'dev',htmlmin(
+        collapseWhitespace: true
+        processScripts: ['application/ld+json', 'text/javascript']
+      )))
+      .pipe(gulp.dest('public'))
+      .pipe sync.stream()
 
 watch = ->
-  gulp.watch 'config/**/*', ['objectus','coffee', 'pug','stylus']
+  gulp.watch 'config/**/*', ['pug', 'stylus', 'coffee']
   gulp.watch dirs.coffee + '/**/*.coffee', ['coffee']
   gulp.watch dirs.stylus + '/**/*.styl', ['stylus']
   gulp.watch dirs.pug + '/**/*.pug', ['pug']
@@ -119,5 +116,5 @@ gulp.task 'sync', ->
   watch()
 
 gulp.task 'watch', watch
-gulp.task 'default', ['objectus','stylus','pug','vendor','coffee']
+gulp.task 'default', ['stylus','pug','vendor','coffee']
 gulp.task 'prod', ['goprod','default']
