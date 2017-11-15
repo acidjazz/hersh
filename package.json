@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "production": "node operations/aeonian.js production",
-    "staging": "node operations/aeonian.js staging"
+    "staging": "node operations/aeonian.js staging",
+    "test": "true"
   },
   "repository": {
     "type": "git",
