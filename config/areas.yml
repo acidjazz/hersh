@@ -1,12 +1,12 @@
 ---
-  - title: Auto, Bicycle, Predestian & Other Personal Inury Accidents
+  - title: Motor Vehicle, Bicycle, Pedestrian & Other Accidents
     copy: A motor vehicle, bicycle, pedestrian or other accident can change your life in an instant.  We have years of experience successfully representing people who have been injured in accidents. If you or a loved one was injured in an accident, contact us for help.
     link: auto
   - title: Dangerous Property Conditions
     copy: Property and roadways can be dangerous for a number of reasons, including failure to warn of a dangerous condition, hazardous items on a property or roadway, dangerous design of a roadway, or failure by owner/operator to repair a dangerous condition.
     link: property
-  - title: Professional Liability & Malpractice (Medical, Legal & Other)
-    copy: Negligence by a doctor, hospital, healthcare provider, nursing home, fertility clinic or sperm bank can result in death and/or permanent injury. We can help.
+  - title: Professional Liability/Medical Malpractice
+    copy: Negligence by a doctor, hospital, healthcare provider, nursing home, fertility clinic or sperm bank can result in death and/or permanent injuries and losses. We have decades of experience representing individuals in these types of cases and have obtained historic results.
     link: malpractice
   - title: Employment Law
     copy: There are specific laws in place to protect employees. Both large and small employers often take advantage of their workers by violating federal, state, and local laws. If you believe your employer has taken advantage of you or denied your rights, contact us.
@@ -14,3 +14,7 @@
   - title: Dangerous & Defective Products/Devices
     copy: As consumers, we are exposed to various products daily and some of those products are very dangerous, even when used correctly. We have decades of experience representing people injured by a variety of products.
     link: danger
+  - title: Negligent & Dangerous Business Practices 
+    copy: Businesses, like sperm banks and universities, have practices that are deceptive, harmful, dangerous and can cause physical or other injuries, or even death. If you think you have been injured or harmed in some way by business practices, contact us. 
+    link: negligent
+
