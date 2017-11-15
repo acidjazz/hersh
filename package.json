@@ -4,8 +4,8 @@
   "description": "hersh and hersh",
   "main": "index.html",
   "scripts": {
-    "dev": "./node_modules/gulp/bin/gulp.js sync",
-    "prod": "./node_modules/gulp/bin/gulp.js prod"
+    "production": "node operations/aeonian.js production",
+    "staging": "node operations/aeonian.js staging"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/acidjazz/hersh#readme",
   "dependencies": {
+    "aeonian": "^1.0.9",
     "browser-sync": "^2.14.0",
     "coffee-script": "^1.10.0",
     "gulp": "^3.9.1",
