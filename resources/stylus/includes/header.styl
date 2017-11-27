@@ -48,6 +48,7 @@ header
     > .inner
       max-width 1200px
       margin auto
+      position relative
       > .option
         display inline-block
         width 13.5%
@@ -59,13 +60,34 @@ header
         transition background-color 0.1s linear
         &:hover
           background-color gc(blue2)
+        &.option_attorneys:hover + .pulldown
+            display block
         animation cellOutY 0.2s linear 0.2s both
         for i in 1..8
           &:nth-child({i})
             animation-delay unit((0.05*i)+0.1, 's')
+.pulldown
+  display none
+  position absolute
+  top 38px
+  left 360px
+  &:hover
+    display block
+  > .option
+    display block
+    padding 10px 
+    text-transform uppercase
+    text-align left
+    color gc(white1)
+    background-color gc(blue1)
+    text-decoration none
+    &:hover
+      background-color gc(blue2)
 
 
 @media all and (min-width: 1px) and (max-width: 1000px)
+  .pulldown
+    display none !important
   header
     > .inner
       padding 30px 12px 
