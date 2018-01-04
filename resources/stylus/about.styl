@@ -2,6 +2,9 @@
   position relative
   background-size cover
   background-position 50% 50%
+  z-index 1
+  transform-style preserve-3d
+  transform translate3d(0,0,0)
   > .copy
     gf(h1)
     color gc(white1)
@@ -36,6 +39,7 @@
       margin-right 25px
       width 475px
       height 600px
+      z-index -1
     > .copy
       width 475px
       float right
