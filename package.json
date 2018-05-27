@@ -4,6 +4,7 @@
   "description": "hersh and hersh",
   "main": "index.html",
   "scripts": {
+    "test": "echo 'we are testing'",
     "production": "node operations/aeonian.js production",
     "staging": "node operations/aeonian.js staging"
   },
