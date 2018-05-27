@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo 'we are testing'",
-    "production": "node operations/aeonian.js production",
+    "production": "node operations/aeonian.js staging",
     "staging": "node operations/aeonian.js staging"
   },
   "repository": {
