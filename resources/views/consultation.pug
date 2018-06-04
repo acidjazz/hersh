@@ -8,19 +8,24 @@
   .copy
     p We provide FREE attorney consultation! If you have been harmed in some way, please contact us today by filling out our online form or call us to arrange a free consultation with our attorneys.
 
-  form.form(action="http://formspree.io/acidjazz@gmail.com",method="post")
+  //form.form(action="//formspree.io/acidjazz@gmail.com",method="post")
+  form.form(
+    action="https://hershlaw.us18.list-manage.com/subscribe/post?u=702b3e7b34128f945367a1876&amp;id=326ebe2ead",
+    method="post",
+  )#mc-embedded-subscribe-form
+
     .field
       .label Name
-      .input: input(type='text',name='name' required)
+      .input: input(type='text',name='FNAME' required)
     .field
       .label Email
-      .input: input(type='email',name='email' required)
+      .input: input(type='email',name='EMAIL' required)
     .field
       .label Phone
-      .input: input(type='phone',name='phone' required)
+      .input: input(type='phone',name='PHONE' required)
     .field
       .label Message
-      .input: textarea(name='textarea' required)
+      .input: textarea(name='MSG' required)
 
     input.submit(type='submit',name='submit',value='submit')
 
@@ -28,4 +33,3 @@
       p free attorney consultation
       p contact us toll free
       p: a(href='tel:18004415545') 1-800-441-5545
-
